@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ssp-deploy
+  name: qa-app
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
+      - name: qa-app
         image: bharamicrosystems/nginx:v1
         ports:
         - containerPort: 80
